@@ -7,10 +7,10 @@ CI/CD is a combination of practices aimed at automating and streamlining softwar
    validated, catching issues early and speeding up the development process. Developers regularly merge their code changes into a shared repository, followed by automated builds and tests. This helps catch issues 
    early in the development process. <br/>
 * `Key Elements of CI`<br/>
-    * `Frequent Commits`: Developers frequently push small, incremental changes to the version control system (e.g., Git). The idea is to minimize integration issues by integrating small chunks of code frequently.<br/>
+    * `Frequent Commits`: Developers frequently push/merge small, incremental changes to the version control system (e.g., Git). The idea is to minimize integration issues by integrating small chunks of code frequently.<br/>
    * `Automated Builds`: Every code change triggers an automatic build process, ensuring that the new code integrates well with the existing codebase. <br/>
    * `Automated Testing`: Automated tests (unit, integration, and sometimes functional tests) run with each commit, allowing developers to catch bugs and errors early in the development cycle. <br/>
-   * `Fast Feedback`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/>
+   * `Fast Feedback (feedback loop)`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/>
 # Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * Difference between Continuous Integration (CI) and Continuous Deployment (CD)
