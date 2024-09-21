@@ -44,3 +44,5 @@ Below are some additional resources and references for further learning: <br/>
 1. [CI/CD pipelines explained: Everything you need to know](https://www.techtarget.com/searchsoftwarequality/CI-CD-pipelines-explained-Everything-you-need-to-know) <br/>
 2. [Iteration in software](https://roadmunk.com/glossary/iteration/)<br/>
 3. [Iterative in development](https://www.techtarget.com/searchsoftwarequality/definition/iterative)<br/>
+4. [What is CICD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)<br/>
+5. [What is a CICD pipeline](https://circleci.com/blog/what-is-a-ci-cd-pipeline/)<br/>
