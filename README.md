@@ -62,8 +62,17 @@ A CI/CD pipeline typically consists of the following stages to automate various 
       * Frequency: CI happens multiple times a day with each code commit, while CD happens whenever a code change passes all tests and is ready for production. <br/>
       * In Continuous Delivery, the deployment to production is manual (usually to ensure checks or approvals), while in Continuous Deployment, the deployment to production is automatic after passing all tests.<br/>
   * Common pipeline stages (Build,Package Test, Deploy) : A typical CI/CD pipeline consists of several stages that help automate the build, test, and deployment of applications. Each stage is a step in the pipeline, ensuring that the software moves from development to production efficiently and reliably.<br/>
-     *`Build` : The build stage compiles the source code into build/binary artifacts. This stage ensures that the code can be successfully compiled and is ready for further testing.<br/>
+     *`Build` : The build stage compiles the source code into build/binary artifacts (e.g., JAR files, WAR files). This stage ensures that the code can be successfully compiled and is ready for further testing.<br/>
         * `Build Tools`: Maven, Gradle, MSBuild. <br/>
+     * `Package`: The build artifact is prepared for deployment, often involving bundling with dependencies and configuration. The compiled code is packaged into distributable formats such as JAR, WAR, installation file or Docker images. This step prepares the application for deployment by making it ready for the environment it will run in (all necessary components are included & ready for deployment). Bundles assets and configures servers for web applications. <br/>
+       * `Package tools` : Tools: Docker, JFrog Artifactory, Nexus. <br/>
+     * `Test`: Runs automated tests to validate the functionality, performance, quality and security of the code. This stage includes unit tests, integration tests, and other types of automated tests. The purpose of this stage is to verify that the application works correctly and meets the defined requirements before it is deployed. Continuous feedback from the tests helps ensure code quality and prevent defects from reaching production.<br/>
+       *`Test Tools`: Tools: JUnit, Selenium, TestNG. <br/>
+    * `Deploy` : The artifact is deployed to different environments (e.g., development, staging, production). This stage ensures that the code is correctly deployed and configured in the target environment. May involve rolling updates or setting up new infrastructure.<br/>
+       *`Deploy Tools` : Kubernetes, Ansible, Terraform. <br/>
+    * `Additional Stages (Optional)`.
+      * `Monitor` : After deployment, the application is monitored for performance issues, errors, and user feedback (with performance metrics and logs being monitored to detect any issues).<br/>
+      * `Rollback` : Some pipelines include rollback mechanisms to revert to a previous version if issues are found after deployment. <br/>
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
 # Version Control Best Practices
  * Importance of version control in CI/CD
