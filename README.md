@@ -61,7 +61,9 @@ A CI/CD pipeline typically consists of the following stages to automate various 
       * Automation: CI involves automated builds and tests for each code commit, whereas CD involves automated deployments to production.<br/>
       * Frequency: CI happens multiple times a day with each code commit, while CD happens whenever a code change passes all tests and is ready for production. <br/>
       * In Continuous Delivery, the deployment to production is manual (usually to ensure checks or approvals), while in Continuous Deployment, the deployment to production is automatic after passing all tests.<br/>
-  * Common pipeline stages (Build, Test, Deploy)
+  * Common pipeline stages (Build,Package Test, Deploy) : A typical CI/CD pipeline consists of several stages that help automate the build, test, and deployment of applications. Each stage is a step in the pipeline, ensuring that the software moves from development to production efficiently and reliably.<br/>
+     *`Build` : The build stage compiles the source code into build/binary artifacts. This stage ensures that the code can be successfully compiled and is ready for further testing.<br/>
+        * `Build Tools`: Maven, Gradle, MSBuild. <br/>
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
 # Version Control Best Practices
  * Importance of version control in CI/CD
