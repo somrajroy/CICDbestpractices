@@ -20,19 +20,21 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
    * `Automated Builds`: Every code change triggers an automatic build process, ensuring that the new code integrates well with the existing codebase. <br/>
    * `Automated Testing`: Automated tests (unit, integration, and sometimes functional tests) run with each commit, allowing developers to catch bugs and errors early in the development cycle. <br/>
    * `Fast Feedback (feedback loop)`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/><br/>
+   * `Benefits` : Early detection of bugs, Reduced integration challenges & Improved code collaboration and consistency. <br/>
 * `Continuous Delivery (CD)` : Continuous Delivery (CD) builds upon CI by automating the process of getting changes from version control to a production-like environment, ready for release. The key idea is that the software can be deployed to production at any time, but the actual deployment is still a manual process. The code changes are always in a deployable state and can be released to production at any time.Continuous Delivery is the practice of automating the release process so that code changes can be deployed to a production-like environment at any time. <br/>
 * `Key Elements of Continuous Delivery` <br/>
   * `Automated deployments`: Applications are automatically built, tested, and prepared for deployment.Code is automatically deployed to a staging environment that mirrors production, ensuring that the application works as expected. <br/>
   * `Automated Testing`: Continuous testing, including not just unit tests but integration and system-level tests, ensures that the code is production-ready.<br/>
   * `Manual Production Releases`: While the pipeline prepares code for production, the final decision to deploy to production is still made by a human (often the release manager).<br/>
   * `Deployment pipelines`: CD pipelines define the steps involved in deploying an application to different environments (e.g., development, staging, production). <br/>
-  * `Benefits` : Code is always in a deployable state, Reduces the risk of release failures, as every release is fully tested & Enables faster releases of new features, as developers can ship changes more frequently. <br/>
+  * `Benefits` : Automated, repeatable processes for deployment readiness, Code is always in a deployable state, Reduces the risk of release failures as every release is fully tested, Manual control for production releases & Enables faster releases of new features as developers can ship changes more frequently. <br/>
   * `Infrastructure as code`: The infrastructure needed for deployment is defined and managed using code, making it easier to replicate and scale.<br/>
 * `Continuous Deployment (CD)` : This is an extension of CD (Continuous Delivery) where changes are automatically deployed to production without manual approval. It requires a high level of confidence in the automated testing process and a robust monitoring system. It's considered more aggressive than Continuous Delivery and requires careful consideration of risks and stability. It needs robust monitoring system. <br/>
 * `Key Elements of Continuous Deployment` <br/>
   * `Automated End-to-End Pipelines`: Once a developer’s changes pass all automated tests and checks, they are automatically pushed to production.<br/>
   * `No Manual Approval`: Unlike Continuous Delivery, Continuous Deployment doesn’t require manual approval for production releases.<br/>
   * `Monitoring and Alerts`: Since changes are automatically deployed to production, monitoring and alerting become critical. If something goes wrong, the system must automatically detect and roll back changes.<br/>
+  * `Benefits` : Immediate release of features and bug fixes, Complete automation of the deployment process & Faster feedback from real users.<br/>
 # How CICD Pipelines works
 A CI/CD pipeline typically consists of the following stages to automate various stages of software development, from code integration to delivery and deployment. Failure at any stage triggers notifications to the responsible developers, while successful deployments are notified to the entire team. The pipeline continues to run automatically, providing consistent feedback and enabling rapid iterations. In some advanced CI/CD setups, there might be overlap between these stages, or additional stages could be added. However, this general breakdown gives the overview of the typical flow. <br/>
  * `Source Code Management (SCM) & Code Commit.` <br/>
@@ -52,6 +54,13 @@ A CI/CD pipeline typically consists of the following stages to automate various 
 # Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * Difference between Continuous Integration (CI) and Continuous Deployment (CD)
+      * CI: Focuses on & involves automatically integrating code changes into a shared repository multiple times a day, triggering automated builds and tests to detect errors early.. Ensures a consistent and reliable codebase. The main goal(purpose) is to improve software quality and reduce the time taken to deliver updates by detecting and fixing bugs early in the development cycle. <br/>
+      * CD (Delivery): CD is an extension of CI that ensures code changes are automatically prepared for a release to production. It involves deploying code changes to a staging environment where they undergo further testing, requiring manual approval for production. The goal (purpose) is to ensure that the code is always in a deployable state and can be released to production at any time with minimal manual intervention. <br/>
+      * CD (Deployment): Automates both testing and deployment, continuously releasing updates directly to production without manual intervention. The goal is to ensure that the software is always in a deployable state and can be released to production without any manual intervention. Often involves canary releases or feature flags to minimize risk. <br/>
+      * Scope: CI focuses on integrating code changes and running tests, while CD (both Continuous Delivery and Continuous Deployment) includes the deployment of code changes to production.<br/>
+      * Automation: CI involves automated builds and tests for each code commit, whereas CD involves automated deployments to production.<br/>
+      * Frequency: CI happens multiple times a day with each code commit, while CD happens whenever a code change passes all tests and is ready for production. <br/>
+      * In Continuous Delivery, the deployment to production is manual (usually to ensure checks or approvals), while in Continuous Deployment, the deployment to production is automatic after passing all tests.<br/>
   * Common pipeline stages (Build, Test, Deploy)
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
 # Version Control Best Practices
