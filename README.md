@@ -40,3 +40,5 @@ These set of practices that automate the building, testing, and deployment of ap
 Below are some additional resources and references for further learning: <br/>
 
 1. [CI/CD pipelines explained: Everything you need to know](https://www.techtarget.com/searchsoftwarequality/CI-CD-pipelines-explained-Everything-you-need-to-know) <br/>
+2. [Iteration in software](https://roadmunk.com/glossary/iteration/)<br/>
+3. [Iterative in development](https://www.techtarget.com/searchsoftwarequality/definition/iterative)<br/>
