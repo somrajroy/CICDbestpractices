@@ -19,7 +19,8 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
     * `Frequent Commits`: Developers frequently push/merge small, incremental changes to the version control system (e.g., Git). The idea is to minimize integration issues by integrating small chunks of code frequently.<br/>
    * `Automated Builds`: Every code change triggers an automatic build process, ensuring that the new code integrates well with the existing codebase. <br/>
    * `Automated Testing`: Automated tests (unit, integration, and sometimes functional tests) run with each commit, allowing developers to catch bugs and errors early in the development cycle. <br/>
-   * `Fast Feedback (feedback loop)`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/>
+   * `Fast Feedback (feedback loop)`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/><br/>
+* `Continuous Delivery (CD)` : Continuous Delivery (CD) builds upon CI by automating the process of getting changes from version control to a production-like environment, ready for release. The key idea is that the software can be deployed to production at any time, but the actual deployment is still a manual process.<br/>
 # Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * Difference between Continuous Integration (CI) and Continuous Deployment (CD)
