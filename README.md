@@ -36,7 +36,7 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
   * `Monitoring and Alerts`: Since changes are automatically deployed to production, monitoring and alerting become critical. If something goes wrong, the system must automatically detect and roll back changes.<br/>
 # How CICD Pipelines works
 A CI/CD pipeline typically consists of the following stages to automate various stages of software development, from code integration to delivery and deployment. Failure at any stage triggers notifications to the responsible developers, while successful deployments are notified to the entire team. The pipeline continues to run automatically, providing consistent feedback and enabling rapid iterations. In some advanced CI/CD setups, there might be overlap between these stages, or additional stages could be added. However, this general breakdown gives the overview of the typical flow. <br/>
- * Source Code Management (SCM) & Code Commit. <br/>
+ * `Source Code Management (SCM) & Code Commit.` <br/>
     * Developers write and commit code to a repository/hared version control system (e.g., GitHub, GitLab, Bitbucket). <br/>
     * Trigger: The pipeline starts when new code is committed to the repository. <br/>
  * `Continuous Integration (CI) Stage`<br/>
