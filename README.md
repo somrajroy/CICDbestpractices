@@ -3,8 +3,8 @@
 # What is a CICD pipeline?
 A CI/CD pipeline is a series of automated steps/processes that build, test, and deploy applications.It is a series of automated processes that enables software teams/developers to deliver code changes more frequently, safely and reliably. It coordinates the processes involved in continuous integration (CI) and continuous delivery/deployment (CD) into a cohesive process that streamlines and accelerates the software development lifecycle. <br/> It encompasses the entire journey of a code change—from development through testing and deployment—ensuring that code is properly integrated, tested, and delivered with minimal manual intervention. The pipeline automates key stages of software development to streamline releases, improve quality, and enable faster feedback loops. <br/>
 Pipelines are fundamental to continuous integration and delivery/deployment (CI/CD). <br/>
-### Key point
-    * `Automation of Processes` : 
+### Key points
+  * `Automation of Processes` : 
 # Definition of CI/CD and why CI/CD matters in modern software development
 CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Continuous Deployment(CD), which are practices designed to automate different stages of the software development lifecycle.The CI portion of the pipeline includes source code management, building, and testing stages, while the CD portion covers the delivery and deployment stages. By automating these processes, CI/CD pipelines reduce the risk of manual errors, ensure consistent output quality, and enable rapid iteration and deployment of applications. <br/>
 These set of practices that automate the building, testing, and deployment of applications. The goal is to reduce the time it takes to get new features into the hands of users. <br/><br/>
