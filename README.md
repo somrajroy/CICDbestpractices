@@ -34,16 +34,22 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
   * `Automated End-to-End Pipelines`: Once a developer’s changes pass all automated tests and checks, they are automatically pushed to production.<br/>
   * `No Manual Approval`: Unlike Continuous Delivery, Continuous Deployment doesn’t require manual approval for production releases.<br/>
   * `Monitoring and Alerts`: Since changes are automatically deployed to production, monitoring and alerting become critical. If something goes wrong, the system must automatically detect and roll back changes.<br/>
-# How CICD Pipelines work
-A CI/CD pipeline typically consists of the following stages to automate various stages of software development, from code integration to delivery and deployment.: <br/>
+# How CICD Pipelines works
+A CI/CD pipeline typically consists of the following stages to automate various stages of software development, from code integration to delivery and deployment. Failure at any stage triggers notifications to the responsible developers, while successful deployments are notified to the entire team. The pipeline continues to run automatically, providing consistent feedback and enabling rapid iterations. In some advanced CI/CD setups, there might be overlap between these stages, or additional stages could be added. However, this general breakdown gives the overview of the typical flow. <br/>
  * Source Code Management (SCM) & Code Commit. <br/>
     * Developers write and commit code to a repository/hared version control system (e.g., GitHub, GitLab, Bitbucket). <br/>
     * Trigger: The pipeline starts when new code is committed to the repository. <br/>
- * `Continuous Integration Stage`<br/>
-    * `Build`: Once a commit is detected, an automated build process begins. The pipeline pulls the latest code from the repository, compiles it along with dependencies, and packages the software into a deployable artifactsor docker containers (e.g., a JAR, WAR, or Docker image).<br/>
+ * `Continuous Integration (CI) Stage`<br/>
+    * `Build`: Once a commit is detected, an automated build process begins by a CI server. The pipeline pulls the latest code from the repository, compiles it along with dependencies, and packages it into a deployable artifacts or docker containers (e.g., a JAR, WAR, or Docker image). Focuses on transforming source code into a machine-readable format. A Build Server/tool (e.g., Jenkins, GitLab CI, GitHub Actions) that pulls the latest code, compiles it, and prepares it for testing. <br/>
+    * `Package` : Focuses on bundling the built artifact into a distributable format. This stage ensures that the artifact is in the correct format/state for the next stages of the pipeline. For containerized applications, this might involve creating a Docker image. For web applications, it might involve bundling assets and configuring the server. <br/>
     * `Automated Tests`: Unit tests, integration tests, end-to-end tests and sometimes static code analysis are run to ensure code correctness and compliance with quality standards & validate application's functionality. <br/>
     * `Feedback Loop`: If the code passes all tests, the pipeline continues. If any test fails, the pipeline is stopped, and results are looped back to developers ,with detailed feedback about the failure, for analysis and remediation. <br/>
-      
+ * Continuous Delivery (CD) Stage <br/>
+    * `Staging Deployment`: Code that passes all CI tests is automatically deployed to a staging environment (a production-like environment). Here, further automated or manual testing can be done, including user acceptance testing (UAT) and performance testing.<br/>
+    * `Manual Approval (optional)`: For Continuous Delivery, a human may review the code and the pipeline output and then approve the final deployment to production. <br/>
+  * `Continuous Deployment (CD) Stage` <br/>
+    * `Automatic Production Deployment`: If Continuous Deployment is enabled, once the code passes all tests and validations, it is automatically pushed to production without requiring any manual intervention.<br/>
+    * `Monitoring and Rollback`: After deployment, the pipeline may trigger automated monitoring and alerting systems to track the health of the live application. If an issue arises, the system may automatically roll back to a previous version. <br/>
 # Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * Difference between Continuous Integration (CI) and Continuous Deployment (CD)
