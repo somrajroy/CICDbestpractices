@@ -38,3 +38,5 @@ These set of practices that automate the building, testing, and deployment of ap
 # Scaling CI/CD Pipelines
 # Appendix
 Below are some additional resources and references for further learning: <br/>
+
+1. [CI/CD pipelines explained: Everything you need to know](https://www.techtarget.com/searchsoftwarequality/CI-CD-pipelines-explained-Everything-you-need-to-know) <br/>
