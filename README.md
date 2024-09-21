@@ -20,7 +20,7 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
    * `Automated Builds`: Every code change triggers an automatic build process, ensuring that the new code integrates well with the existing codebase. <br/>
    * `Automated Testing`: Automated tests (unit, integration, and sometimes functional tests) run with each commit, allowing developers to catch bugs and errors early in the development cycle. <br/>
    * `Fast Feedback (feedback loop)`: CI tools provide immediate feedback, informing developers whether their code passed the build and tests or failed, enabling quick fixes.<br/><br/>
-* `Continuous Delivery (CD)` : Continuous Delivery (CD) builds upon CI by automating the process of getting changes from version control to a production-like environment, ready for release. The key idea is that the software can be deployed to production at any time, but the actual deployment is still a manual process. The code changes are always in a deployable state and can be released to production at any time.<br/>
+* `Continuous Delivery (CD)` : Continuous Delivery (CD) builds upon CI by automating the process of getting changes from version control to a production-like environment, ready for release. The key idea is that the software can be deployed to production at any time, but the actual deployment is still a manual process. The code changes are always in a deployable state and can be released to production at any time.Continuous Delivery is the practice of automating the release process so that code changes can be deployed to a production-like environment at any time. <br/>
 * `Key Elements of Continuous Delivery` <br/>
   * `Automated deployments`: Applications are automatically built, tested, and prepared for deployment.<br/>
   * `Automated Testing`: Continuous testing, including not just unit tests but integration and system-level tests, ensures that the code is production-ready.<br/>
@@ -29,11 +29,21 @@ CI/CD stands for Continuous Integration (CI), Continuous Delivery (CD), and Cont
   * `Deployment pipelines`: CD pipelines define the steps involved in deploying an application to different environments (e.g., development, staging, production). <br/>
   * Benefits : Code is always in a deployable state, Reduces the risk of release failures, as every release is fully tested & Enables faster releases of new features, as developers can ship changes more frequently. <br/>
   * `Infrastructure as code`: The infrastructure needed for deployment is defined and managed using code, making it easier to replicate and scale.<br/>
-* `Continuous Deployment (CD)` : This is an extension of CD (Continuous Delivery) where changes are automatically deployed to production without manual approval. It requires a high level of confidence in the automated testing process and a robust monitoring system. It's considered more aggressive than CD and requires careful consideration of risks and stability <br/>
+* `Continuous Deployment (CD)` : This is an extension of CD (Continuous Delivery) where changes are automatically deployed to production without manual approval. It requires a high level of confidence in the automated testing process and a robust monitoring system. It's considered more aggressive than Continuous Delivery and requires careful consideration of risks and stability. It needs robust monitoring system. <br/>
 * `Key Elements of Continuous Deployment` <br/>
   * `Automated End-to-End Pipelines`: Once a developer’s changes pass all automated tests and checks, they are automatically pushed to production.<br/>
   * `No Manual Approval`: Unlike Continuous Delivery, Continuous Deployment doesn’t require manual approval for production releases.<br/>
   * `Monitoring and Alerts`: Since changes are automatically deployed to production, monitoring and alerting become critical. If something goes wrong, the system must automatically detect and roll back changes.<br/>
+# How CICD Pipelines work
+A CI/CD pipeline typically consists of the following stages to automate various stages of software development, from code integration to delivery and deployment.: <br/>
+ * Source Code Management (SCM) & Code Commit. <br/>
+    * Developers write and commit code to a repository/hared version control system (e.g., GitHub, GitLab, Bitbucket). <br/>
+    * Trigger: The pipeline starts when new code is committed to the repository. <br/>
+ * `Continuous Integration Stage`<br/>
+    * `Build`: Once a commit is detected, an automated build process begins. The pipeline pulls the latest code from the repository, compiles it along with dependencies, and packages the software into a deployable artifactsor docker containers (e.g., a JAR, WAR, or Docker image).<br/>
+    * `Automated Tests`: Unit tests, integration tests, end-to-end tests and sometimes static code analysis are run to ensure code correctness and compliance with quality standards & validate application's functionality. <br/>
+    * `Feedback Loop`: If the code passes all tests, the pipeline continues. If any test fails, the pipeline is stopped, and results are looped back to developers ,with detailed feedback about the failure, for analysis and remediation. <br/>
+      
 # Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * Difference between Continuous Integration (CI) and Continuous Deployment (CD)
