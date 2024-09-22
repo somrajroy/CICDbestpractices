@@ -50,7 +50,6 @@ A CI/CD pipeline typically consists of the following stages to automate various 
   * `Continuous Deployment (CD) Stage` <br/>
     * `Automatic Production Deployment`: If Continuous Deployment is enabled, once the code passes all tests and validations, it is automatically pushed to production without requiring any manual intervention.<br/>
     * `Monitoring and Rollback`: After deployment, the pipeline may trigger automated monitoring and alerting systems to track the health of the live application. If an issue arises, the system may automatically roll back to a previous version. <br/>
-# Overview of best practices in CI/CD pipelines
 # Understanding CI/CD Pipelines
   * `Difference between Continuous Integration (CI) and Continuous Deployment (CD)`
       * CI: Focuses on & involves automatically integrating code changes into a shared repository multiple times a day, triggering automated builds and tests to detect errors early.. Ensures a consistent and reliable codebase. The main goal(purpose) is to improve software quality and reduce the time taken to deliver updates by detecting and fixing bugs early in the development cycle. <br/>
@@ -73,6 +72,10 @@ A CI/CD pipeline typically consists of the following stages to automate various 
       * `Monitor` : After deployment, the application is monitored for performance issues, errors, and user feedback (with performance metrics and logs being monitored to detect any issues).<br/>
       * `Rollback` : Some pipelines include rollback mechanisms to revert to a previous version if issues are found after deployment. <br/>
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
+# CI/CD pipelines best practices
+Below are some best practices to follow in CICD pipelines. <br/>
+### Automate Everything (as much as possible)
+  * Objective: Minimize manual intervention to reduce error,  improve efficiency and save time.
 # Version Control Best Practices
  * Importance of version control in CI/CD
  * Git branch strategy (e.g., Gitflow, Trunk-based development)
