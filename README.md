@@ -75,8 +75,11 @@ A CI/CD pipeline typically consists of the following stages to automate various 
 # CI/CD pipelines best practices
 Below are some best practices to follow in CICD pipelines. <br/>
 #### 1. Automate Everything (as much as possible)
-  * Objective: Minimize manual intervention to reduce error,  improve efficiency and save time.<br/>
-  * Best Practice: Automate as much of the CI/CD process as possible, including build, test, packaging, deployment, and monitoring. Automation reduces the chance of human error and ensures consistency. <br/>
+  * `Objective`: Minimize manual intervention to reduce error,  improve efficiency and save time.<br/>
+  * `Best Practice`: Automate as much of the CI/CD process as possible, including build, test, packaging, deployment, and monitoring. Automation reduces the chance of human error and ensures consistency. <br/>
+  * `Implementation` :
+      * Use tools like AWS Codepipeline, GitHub Actions, Azure DevOps, Jenkins, or GitLab CI for automating workflows. <br/>
+      * `Employ Infrastructure-as-Code (IaC)` tools like Terraform or AWS CloudFormation to automate infrastructure provisioning.<br/>
 # Version Control Best Practices
  * Importance of version control in CI/CD
  * Git branch strategy (e.g., Gitflow, Trunk-based development)
