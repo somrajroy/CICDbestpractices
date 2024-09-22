@@ -74,7 +74,7 @@ A CI/CD pipeline typically consists of the following stages to automate various 
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
 # CI/CD pipelines best practices
 Below are some best practices to follow in CICD pipelines. <br/>
-### Automate Everything (as much as possible)
+#### * Automate Everything (as much as possible)
   * Objective: Minimize manual intervention to reduce error,  improve efficiency and save time.
 # Version Control Best Practices
  * Importance of version control in CI/CD
