@@ -73,7 +73,8 @@ A CI/CD pipeline typically consists of the following stages to automate various 
       * `Rollback` : Some pipelines include rollback mechanisms to revert to a previous version if issues are found after deployment. <br/>
   * Tools used in CI/CD (e.g., Jenkins, GitLab CI, CircleCI, Azure DevOps, AWS DevOps)
 # CI/CD pipelines best practices
-Below are some best practices to follow in CICD pipelines. <br/>
+When implementing CI/CD pipelines, following best practices is crucial for ensuring efficiency, reliability, and scalability in your software development process. Below is a detailed guide that provides clear, prescriptive, and objective guidelines for creating effective CI/CD pipelines. These guidelines are rooted in industry standards and can be adopted to optimize CI/CD workflows, reduce errors, and deliver high-quality software faster. <br/>
+### Core Principles
 #### 1. Automate Everything (as much as possible)
   * `Objective`: Minimize manual intervention to reduce error,  improve efficiency and save time.<br/>
   * `Best Practice`: Automate as much of the CI/CD process as possible, including build, test, packaging, deployment, and monitoring. Automation reduces the chance of human error and ensures consistency. <br/>
