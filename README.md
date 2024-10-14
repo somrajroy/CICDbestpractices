@@ -88,6 +88,12 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  Store CI/CD pipeline configurations as code (e.g., using Jenkinsfile or YAML in GitHub Actions/Azure-AWS DevOps) to ensure that pipeline changes are tracked. <br/>
       * Use GitOps principles to manage infrastructure configurations in version control.<br/>
       * `Continuous Improvement`: Regularly review and refine your CI/CD pipeline to adapt to changing requirements and best practices. <br/>
+#### 3. Implement Parallel Stages
+ * `Objective`: Optimize pipeline speed by running independent stages in parallel.<br/>
+ *  `Best Practice` : Run non-dependent pipeline stages simultaneously to reduce the total pipeline run time. <br/>
+ * `Implementation` :
+      * Use tools like GitHub Actions that allow for parallel job execution. <br/>
+      * Ensure that build and test jobs that do not rely on each other can run concurrently.<br/>
 #### 3. Testing Strategies. Testing Pyramid. Test Early, Test Often
   * `Objective`: Catch errors early in the process to avoid costly fixes later. Automate as many tests as possible to reduce manual effort and improve test coverage. <br/>
   * `Best Practice`: Implement testing at every stage of the CI/CD pipeline to ensure that code is continuously validated. Prioritize unit, integration, and end-to-end tests to ensure code quality at all levels. <br/>
@@ -98,12 +104,13 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
      * `Security Tests`: Run security scans to identify vulnerabilities.<br/>
      * `Performance Tests`: Ensure the application meets performance requirements.<br/>
   * `Implementation` :
-      *  Automate tests in pipeline using tools like TFLint, TFSec, Selenium, JUnit, or Mocha. <br/>
+      * `Test Automation`: Automate as many tests as possible to reduce manual effort and improve test coverage. Automate tests in pipeline using tools like TFLint, TFSec, Selenium, JUnit, or Mocha. <br/>
       * Use static code analysis tools like SonarQube to ensure code quality.<br/>
       * Integrate security tests (SAST/DAST) using tools like OWASP ZAP or Veracode. <br/>
-      * Mock Testing: Use mocking frameworks to isolate components and simplify testing.<br/>
-      * Test Data Management: Manage test data effectively to avoid data-related issues and ensure consistent testing.<br/>
-#### 2. Fail Fast, Fix Fast
+      * `Test Pyramid`: Prioritize unit tests, integration tests, and end-to-end tests to ensure comprehensive coverage.<br/>
+      * `Mock Testing`: Use mocking frameworks to isolate components and simplify testing.<br/>
+      * `Test Data Management`: Manage test data effectively to avoid data-related issues and ensure consistent testing.<br/>
+#### 4. Fail Fast, Fix Fast
  * `Objective`: Quickly identify and fix issues in the pipeline to minimize downtime.<br/>
  *  `Best Practice` : The pipeline should be designed to fail fast if any stage encounters an error. This prevents wasted time on subsequent stages when the earlier stages have already failed. <br/>
  * `Implementation` :
@@ -147,6 +154,12 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  Ensure that your pipeline is optimized for frequent deployments. <br/>
       *  Use feature flags to roll out new features gradually.<br/>
       *  Automate deployments to production using tools like Jenkins, AWS CodePipeline, or Azure Pipelines.<br/>
+#### 6. Enforce Code Quality and Code Reviews
+  * `Objective`: Maintain high code quality throughout the CI/CD pipeline.<br/>
+  * `Best Practice`: Ensure that every code change goes through automated code quality checks and manual code reviews before merging.<br/>
+  * `Implementation` :
+      *  Use automated linters (e.g., TFLint for Terrform, ESLint for JavaScript, Checkstyle for Java) to enforce coding standards. <br/>
+      * Set up pull request workflows that require peer code reviews to ensure high-quality contributions. <br/>
 ### Deployment Strategies
 #### 1. Implement Rollback Strategies
   * `Objective`: Have a plan in place to roll back changes if issues arise, ensuring minimal disruption. Ensure the ability to quickly roll back in case of failed deployments.<br/>
@@ -161,6 +174,27 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  In blue-green deployment, two identical environments are used—one live (green) and one idle (blue). After testing on the blue environment, traffic is switched from green to blue. <br/>
       *  In canary deployment, new features are released to a small subset of users before full rollout, allowing for real-world testing while limiting impact.<br/>
       * Feature Flags: Use feature flags to control the availability of features without deploying new code, allowing for A/B testing and gradual rollouts. <br/>
+### Security and Compliance
+#### 1. Use Security Best Practices (DevSecOps)
+  * `Objective`: Ensure that security is embedded throughout the CI/CD pipeline.<br/>
+  * `Best Practice`: Shift security left by integrating security checks early in the CI/CD pipeline (DevSecOps).<br/>
+  * `Implementation` :
+      *  `Security Best Practices`: Implement security measures like encryption, access controls, and vulnerability scanning to protect the pipeline and applications.<br/>
+      * `Compliance Adherence`: Ensure your CI/CD pipeline complies with relevant industry standards and regulations (e.g., GDPR, HIPAA). <br/>
+      *  Run automated security tests (e.g., static code analysis, dependency scanning) as part of the CI process. <br/>
+      *  Use security tools like TFSec to scan for vulnerabilities or third party dependencies.<br/>
+      *  Enforce secure credential management and use environment-specific secrets stored securely (e.g., HashiCorp Vault, AWS Secrets Manager).<br/>
+### Monitoring and Feedback
+#### 1. Monitor and Optimize Pipeline Performance
+  * `Objective`: Continuously improve the pipeline by tracking and addressing bottlenecks.<br/>
+  * `Best Practice`: Monitor the performance of the pipeline, tracking metrics such as build time, test coverage, and deployment success rate.<br/>
+  * `Implementation` :
+      *  Use tools like Prometheus and Grafana to collect and visualize metrics.<br/>
+      *  Set up monitoring tools like New Relic or Datadog to track the health of your deployments.<br/>
+      *  Regularly review and optimize pipeline performance to reduce build times and improve efficiency. <br/>
+      * `Continuous Monitoring`: Monitor application performance, health, and user behavior to identify and address issues promptly.<br/>
+      *  `Alerting`: Set up alerts for critical events to ensure timely notification and response.<br/>
+      *  `Feedback Loops`: Gather feedback from developers, testers, and stakeholders to continuously improve the CI/CD pipeline.<br/>
 # Version Control Best Practices
  * Importance of version control in CI/CD
  * Git branch strategy (e.g., Gitflow,  Trunk-based development)
