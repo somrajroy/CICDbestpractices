@@ -1,4 +1,3 @@
-# CICDbestpractices
 # Introduction and overview
 # What is a CICD pipeline?
 A CI/CD pipeline is a series of automated steps/processes that build, test, and deploy applications. It enables software teams/developers to deliver code changes more frequently, safely and reliably. It coordinates the processes involved in continuous integration (CI) and continuous delivery/deployment (CD) into a cohesive process that streamlines and accelerates the software development lifecycle. <br/> It encompasses the entire journey of a code change—from development through testing and deployment—ensuring that code is properly integrated, tested, and delivered with minimal manual intervention. The pipeline automates key stages of software development to streamline releases, improve quality, and enable faster feedback loops. <br/>
@@ -131,10 +130,10 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  Use tools like Prometheus and Grafana to collect and visualize metrics. <br/>
       *  Set up monitoring tools like New Relic or Datadog to track the health of your deployments.<br/>
       *  Regularly review and optimize pipeline performance to reduce build times and improve efficiency. <br/>
-      * Modularization: Break down the pipeline into smaller, reusable stages to improve maintainability and flexibility.<br/>
-      * Parameterization: Use parameters to configure the pipeline dynamically, making it easier to adapt to different environments. <br/>
-      * Environment Management: Clearly define and manage different environments (e.g., development, staging, production) to avoid confusion and ensure consistency. <br/>
-      * Infrastructure as Code (IaC): Use tools like Terraform or Ansible to define and manage infrastructure resources, making it easier to replicate and scale environments. <br/>
+      * `Modularization`: Break down the pipeline into smaller, reusable stages to improve maintainability and flexibility.<br/>
+      * `Parameterization`: Use parameters to configure the pipeline dynamically, making it easier to adapt to different environments. <br/>
+      * `Environment Management`: Clearly define and manage different environments (e.g., development, staging, production) to avoid confusion and ensure consistency. <br/>
+      * `Infrastructure as Code (IaC)`: Use tools like Terraform or Ansible to define and manage infrastructure resources, making it easier to replicate and scale environments. <br/>
 #### 3. Implement Parallel Stages
   * `Objective`: Optimize pipeline speed by running independent stages in parallel.<br/>
   * `Best Practice`: Run non-dependent pipeline stages simultaneously to reduce the total pipeline run time. <br/>
@@ -159,7 +158,7 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
   * `Best Practice`: Ensure that every code change goes through automated code quality checks and manual code reviews before merging.<br/>
   * `Implementation` :
       *  Use automated linters (e.g., TFLint for Terrform, ESLint for JavaScript, Checkstyle for Java) to enforce coding standards. <br/>
-      * Set up pull request workflows that require peer code reviews to ensure high-quality contributions. <br/>
+      *  Set up pull request workflows that require peer code reviews to ensure high-quality contributions. <br/>
 ### Deployment Strategies
 #### 1. Implement Rollback Strategies
   * `Objective`: Have a plan in place to roll back changes if issues arise, ensuring minimal disruption. Ensure the ability to quickly roll back in case of failed deployments.<br/>
@@ -216,3 +215,4 @@ Below are some additional resources and references for further learning: <br/>
 3. [Iterative in development](https://www.techtarget.com/searchsoftwarequality/definition/iterative)<br/>
 4. [What is CICD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)<br/>
 5. [What is a CICD pipeline](https://circleci.com/blog/what-is-a-ci-cd-pipeline/)<br/>
+6. [How to design a modern CI/CD Pipeline]([https://circleci.com/blog/what-is-a-ci-cd-pipeline/](https://www.youtube.com/watch?v=KnSBNd3b0qI)<br/>
