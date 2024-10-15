@@ -237,3 +237,4 @@ Below are some additional resources and references for further learning: <br/>
 4. [What is CICD](https://www.redhat.com/en/topics/devops/what-is-ci-cd)<br/>
 5. [What is a CICD pipeline](https://circleci.com/blog/what-is-a-ci-cd-pipeline/)<br/>
 6. [How to design a modern CI/CD Pipeline](https://www.youtube.com/watch?v=KnSBNd3b0qI)<br/>
+7. [Get started with Azure DevOps](https://learn.microsoft.com/en-us/training/paths/evolve-your-devops-practices/)<br/>
