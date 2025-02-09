@@ -1,5 +1,5 @@
 # CICD pipeline & best practices
-# Introduction - What is a CICD pipeline ?
+# What is a CICD pipeline ?
 [A CI/CD pipeline is a series of automated steps/processes that build, test, and deploy applications](https://opensource.com/article/18/8/what-cicd). It enables software teams/developers to deliver code changes more frequently, safely and reliably. It coordinates the processes involved in continuous integration (CI) and continuous delivery/deployment (CD) into a cohesive process that streamlines and accelerates the software development lifecycle. <br/> It encompasses the entire journey of a code change—from development through testing and deployment—ensuring that code is properly integrated, tested, and delivered with minimal manual intervention. The pipeline automates key stages of software development to streamline releases, improve quality, and enable faster feedback loops. <br/>
 Pipelines are fundamental to continuous integration and delivery/deployment (CI/CD). <br/>
 ### Key points
