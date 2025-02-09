@@ -92,7 +92,7 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
  * `Implementation` :
       * Use tools like GitHub Actions that allow for parallel job execution. <br/>
       * Ensure that build and test jobs that do not rely on each other can run concurrently.<br/>
-#### 3. Testing Strategies. Testing Pyramid. Test Early, Test Often
+#### 3. Run Tests Early and Often
   * `Objective`: Catch errors early in the process to avoid costly fixes later. Automate as many tests as possible to reduce manual effort and improve test coverage. <br/>
   * `Best Practice`: Implement testing at every stage of the CI/CD pipeline to ensure that code is continuously validated. Prioritize unit, integration, and end-to-end tests to ensure code quality at all levels. <br/>
   * `Types of Testing`:
@@ -164,6 +164,9 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
 #### 8. Build Once, Deploy Many
   * `Guideline` : Build artifacts once and promote them through the pipeline to different environments (e.g., staging, production). Avoid rebuilding the same code for different environments.<br/>
   * `Benefit` : This practice ensures consistency across environments and reduces the risk of discrepancies between builds. <br/>
+#### 8. Keep Builds Fast
+  * `Guideline` : Optimize build process to ensure that builds are fast. Use incremental builds, parallel processing, and caching to speed up the build times. <br/>
+  * `Benefit` : Faster builds provide quicker feedback to developers, allowing them to address issues promptly. <br/> 
 ### Deployment Strategies
 #### 1. Implement Rollback Strategies
   * `Objective`: Have a plan in place to roll back changes if issues arise, ensuring minimal disruption. Ensure the ability to quickly roll back in case of failed deployments.<br/>
@@ -178,6 +181,9 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  In blue-green deployment, two identical environments are used—one live (green) and one idle (blue). After testing on the blue environment, traffic is switched from green to blue. <br/>
       *  In canary deployment, new features are released to a small subset of users before full rollout, allowing for real-world testing while limiting impact.<br/>
       * Feature Flags: Use feature flags to control the availability of features without deploying new code, allowing for A/B testing and gradual rollouts. <br/>
+#### 3. Use Feature Flags for Safer Deployments
+ * `Guideline`: Implement feature flags to control the release of new features. This allows to deploy code to production without immediately enabling it for all users.<br/>
+ * `Benefit`: Feature flags enable safer deployments by allowing to test new features in production with a limited audience before a full rollout. <br/>
 ### Security and Compliance
 #### 1. Use Security Best Practices (DevSecOps)
   * `Objective`: Ensure that security is embedded throughout the CI/CD pipeline.<br/>
