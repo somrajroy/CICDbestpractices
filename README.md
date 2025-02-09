@@ -158,6 +158,12 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
   * `Implementation` :
       *  Use automated linters (e.g., TFLint for Terrform, ESLint for JavaScript, Checkstyle for Java) to enforce coding standards. <br/>
       *  Set up pull request workflows that require peer code reviews to ensure high-quality contributions. <br/>
+#### 7. Maintain Parity with Production
+  * `Guideline` : Ensure that DEV, QA/staging and UAT environments closely mirror production environment. This includes using the same configurations, databases, and dependencies.<br/>
+  * `Benefit` : Environment parity helps identify and resolve issues that might only occur in production, ensuring smoother deployments. <br/>
+#### 8. Build Once, Deploy Many
+  * `Guideline` : Build artifacts once and promote them through the pipeline to different environments (e.g., staging, production). Avoid rebuilding the same code for different environments.<br/>
+  * `Benefit` : This practice ensures consistency across environments and reduces the risk of discrepancies between builds. <br/>
 ### Deployment Strategies
 #### 1. Implement Rollback Strategies
   * `Objective`: Have a plan in place to roll back changes if issues arise, ensuring minimal disruption. Ensure the ability to quickly roll back in case of failed deployments.<br/>
