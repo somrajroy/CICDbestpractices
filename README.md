@@ -115,6 +115,9 @@ When implementing CI/CD pipelines, following best practices is crucial for ensur
       *  Set up notifications (Slack, email, etc.) to alert developers as soon as a pipeline fails.<br/>
       *  Ensure logs are accessible and detailed, enabling rapid troubleshooting. <br/>
       *  Use tools like Loggly or ELK stack (Elasticsearch, Logstash, Kibana) for real-time monitoring of pipeline activities. <br/>
+#### 5. Document the CI/CD Processes
+ * `Guideline`: Maintain comprehensive documentation of the CI/CD processes, including pipeline configurations, scripts, and best practices.<br/>
+ * `Benefit`: Documentation ensures that all team members understand the CI/CD processes and can contribute effectively. It also helps onboard new team members more quickly. <br/>
 ### Pipeline Design and Configuration
 #### 1. Ensure Pipeline as Code (PaC)
   * `Objective`: Make CI/CD pipelines reproducible, transparent, and version-controlled.<br/>
@@ -251,3 +254,6 @@ Below are some additional resources and references for further learning: <br/>
 6. [How to design a modern CI/CD Pipeline](https://www.youtube.com/watch?v=KnSBNd3b0qI)<br/>
 7. [Get started with Azure DevOps](https://learn.microsoft.com/en-us/training/paths/evolve-your-devops-practices/)<br/>
 8. [CI/CD for Data Projects](https://www.youtube.com/watch?v=YoGfUAQyGh0)<br/>
+9. [8 CI/CD best practices to set you up for success](https://opensource.com/article/20/5/cicd-best-practices?form=MG0AV3)<br/>
+10. [CI/CD pipelines: Phases, success pillars, challenges, and solutions](https://octopus.com/devops/ci-cd/ci-cd-pipeline/)<br/>
+11. [What is CI/CD? Stages, capabilities, and best practices](https://octopus.com/devops/ci-cd/?form=MG0AV3)<br/>
